@@ -1,0 +1,253 @@
+html {
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+    background-image: url("tło.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: #ffffff;
+}
+
+#logo {
+    clear: both;
+    height: 100px;
+    text-align: center;
+}
+
+#menu {
+    clear: both;
+    text-align: center;
+}
+
+#przegladaj, #aktualizuj, #dodaj {
+    height: 50px;
+    width: 20%;
+    float: left;
+    background-color: #12203d;
+    border-right: 1px solid rgba(255, 255, 255, 0.45);
+    box-sizing: border-box;
+}
+
+#lan {
+    height: 50px;
+    width: 10%;
+    float: left;
+    background-color: #12203d;
+    border-right: 1px solid rgba(255, 255, 255, 0.45);
+    box-sizing: border-box;
+}
+
+#logowanie {
+    height: 50px;
+    width: 30%;
+    float: left;
+    background-color: #12203d;
+    border-right: 1px solid rgba(255, 255, 255, 0.45);
+    box-sizing: border-box;
+}
+
+.menu {
+    background: none;
+    border: none;
+    background-color: #12203d;
+    color: #ffffff;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+
+.menu:hover {
+    background-color: #0e182e;
+}
+
+#witaj {
+    margin-left: 25%;
+    width: 50%;
+    height: 75%;
+    background-color: #12203d;
+    color: #ffffff;
+}
+
+.back {
+    float: left;
+    margin: 25px 50px 50px 50px;
+    width: 100px;
+    height: 100px;
+    background-color: #12203d;
+}
+
+.back:hover {
+    background-color: #0e182e;
+    cursor: pointer;
+}
+
+#content {
+    clear: both;
+    height: 500px;
+    overflow: scroll;
+    text-align: center;
+}
+
+#tytul {
+    font-size: 200%;
+}
+
+.select {
+    background: none;
+    border: none;
+    background-color: #12203d;
+    color: #ffffff;
+    width: 20%;
+    height: 20%;
+    margin: 20px;
+    font-size: 150%;
+    cursor: pointer;
+}
+
+.select:hover {
+    background-color: #0e182e;
+}
+
+#error {
+    margin: auto;
+    margin-top: 150px;
+    padding-top: 25px;
+    font-size: large;
+    text-align: center;
+    height: 50px;
+    width: 250px;
+    background-color: rgb(128, 9, 9);
+    box-shadow: 0 0 10px rgb(128, 9, 9);
+    color: #ffffff;
+}
+
+#output {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 25px;
+  }
+  
+#output tr, #output th {
+    border: 1px solid #ddd;
+    background-color: #ffffff;
+    padding: 8px;
+}
+  
+#output tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+  
+#output td:hover {
+    background-color: #ddd;
+}
+  
+#output th {
+    text-align: left;
+    background-color: #12203d;
+    color: #ffffff;
+}
+
+.login {
+    padding-top: 50px;
+}
+
+.login a {
+    color: #12203d;
+}
+
+input[type=text], input[type=password] {
+    width: 25%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    outline: none !important;
+    border:1px solid #12203d;
+    box-shadow: 0 0 10px #12203d;
+  }
+
+input[type=submit] {
+    width: 25%;
+    background-color: #12203d;
+    color: #ffffff;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+}
+  
+input[type=submit]:hover {
+    background-color: #0e182e;
+}
+
+footer {
+    clear: both;
+    height: 160px;
+    background-color: #12203d;
+    color: #ffffff;
+}
+
+#uzytkownik {
+    float: right;
+    padding-right: 15px;
+    padding-top: 90px;
+    color: #ffffff;
+}
+
+#kontakt {
+    float: left;
+    text-align: left;
+    font-size: small;
+    padding-left: 20px;
+}
+
+a {
+    color: #ffffff;
+}
+
+.href {
+    color:#0e182e
+}
+
+#input {
+    border-collapse: collapse;
+    width: 95%;
+    margin: 25px;
+  }
+  
+#input tr, #input th {
+    border: 1px solid #ddd;
+    background-color: #ffffff;
+    padding: 8px;
+}
+  
+#input tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+  
+#input th {
+    text-align: left;
+    background-color: #12203d;
+    color: #ffffff;
+}
+
+#input input {
+    height: 100%;
+    width: 100%;
+    background: none;
+    border: none;
+}
+
+#input select {
+    height: 100%;
+    width: 100%;
+    background: none;
+    border: none;
+}
