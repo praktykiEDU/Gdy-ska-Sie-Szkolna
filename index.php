@@ -9,7 +9,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Gdyńska Sieć Szkolna</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleV2.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<script src="jquery.js"></script>
 </head>
@@ -33,21 +33,14 @@
             <button type="button" onclick="window.location.href='lan.php'" class="menu">LAN</button>
         </div>
         <div id="logowanie">
-            <?php
-                error_reporting(0);
-                if (($_SESSION["loggedin"]) == true) {
-                    echo "<button type='button' onclick='window.location.href=`panel_sterowania.php`' class='menu'>Panel sterowania</button>";
-                } else {
-                    echo "<button type='button' onclick='window.location.href=`login.php`' class='menu'>Zaloguj się</button>";
-                }
-            ?>
+            <button type='button' onclick='window.location.href=`panel_sterowania.php`' class='menu'>Panel sterowania</button>
         </div>
     </div>
     <div id="content">
-        <div id="witaj">
-            <h1>Witaj!</h1>
-            <p></p>
-        </div>
+        <h1 style="margin-top: 150px;">WITAJ NA NASZEJ<span style="color: #12203d;"> STRONIE</span>!</h1>
+        <h3>Tempora mutantur et nos mutamur in illis</h3>
+        <button type="button" onclick="window.location.href='login.php'" class="welcome">Zaloguj się</button>
+        <button type="button" onclick="window.location.href='register.php'" class="welcome">Zarejestruj się</button>
     </div>
     <footer>
         <div id="uzytkownik">
