@@ -12,6 +12,12 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<script src="jquery.js"></script>
+    <script src="jquery.tablesorter.js"></script>
+    <script>
+        $(function() {
+            $("#output").tablesorter();
+        });
+    </script>
 </head>
 <body>
     <div id="logo">
@@ -33,14 +39,7 @@
             <button type="button" onclick="window.location.href='lan.php'" class="menu">LAN</button>
         </div>
         <div id="logowanie">
-            <?php
-                error_reporting(0);
-                if (($_SESSION["loggedin"]) == true) {
-                    echo "<button type='button' onclick='window.location.href=`panel_sterowania.php`' class='menu'>Panel sterowania</button>";
-                } else {
-                    echo "<button type='button' onclick='window.location.href=`login.php`' class='menu'>Zaloguj się</button>";
-                }
-            ?>
+            <button type='button' onclick='window.location.href=`panel_sterowania.php`' class='menu'>Panel sterowania</button>
         </div>
     </div>
     <div id="content">
@@ -55,28 +54,31 @@
                         echo '<table id="output" style="visibility: hidden">';
                     }
         ?>
-            <tr>
-                <th>ID</th> <th>Nazwa użytkownika</th> <th>E-Mail</th> <th>ID szkoły</th> <th>Nazwa szkoły</th> <th>Admin</th> <th>Super admin</th>
-            </tr>
-            <?php
-                $sql = "SELECT * FROM uzytkownicy";
-                $result = mysqli_query($link,$sql);
-                $super_admin = mysqli_query($link, "SELECT * FROM uzytkownicy WHERE username = '".$_SESSION['username']."'");
-                $permissions = mysqli_fetch_assoc($super_admin);
-                    if ($permissions["super_admin"] == true) {
-                        if (mysqli_num_rows($result) > 0) {
-                            // output data of each row
-                            while($row = mysqli_fetch_assoc($result)) {
-                            echo "<tr>"."<th> ".$row["id"]."</th>"."<td>". $row["username"]. "</td>"."<td>".$row["email"]."</td>"."<td>".$row["szkola_id"]."</td>".
-                            "<td>".$row["szkola"]."</td>"."<td>".$row["admin"]."</td>"."<td>".$row["super_admin"]."</td></tr>" ; 
+            <thead>
+                <tr>
+                    <th>ID</th> <th>Nazwa użytkownika</th> <th>E-Mail</th> <th>ID szkoły</th> <th>Nazwa szkoły</th> <th>Admin</th> <th>Super admin</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                    $sql = "SELECT * FROM uzytkownicy";
+                    $result = mysqli_query($link,$sql);
+                    $super_admin = mysqli_query($link, "SELECT * FROM uzytkownicy WHERE username = '".$_SESSION['username']."'");
+                    $permissions = mysqli_fetch_assoc($super_admin);
+                        if ($permissions["super_admin"] == true) {
+                            if (mysqli_num_rows($result) > 0) {
+                                // output data of each row
+                                while($row = mysqli_fetch_assoc($result)) {
+                                echo "<tr>"."<th> ".$row["id"]."</th>"."<td>". $row["username"]. "</td>"."<td>".$row["email"]."</td>"."<td>".$row["szkola_id"]."</td>".
+                                "<td>".$row["szkola"]."</td>"."<td>".$row["admin"]."</td>"."<td>".$row["super_admin"]."</td></tr>" ; 
+                                }
+                            } 
+                            else {
+                                echo "0 wyników";
                             }
-                        } 
-                        else {
-                            echo "0 wyników";
                         }
-                    }
                 ?>
-            
+            </tbody>
         </table>
         <div class="back">
             <a href="panel_sterowania.php" title="Przejdź na stronę główną">

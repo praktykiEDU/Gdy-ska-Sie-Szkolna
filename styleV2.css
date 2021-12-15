@@ -62,14 +62,6 @@ body {
     background-color: #0e182e;
 }
 
-#witaj {
-    margin-left: 25%;
-    width: 50%;
-    height: 75%;
-    background-color: #12203d;
-    color: #ffffff;
-}
-
 .back {
     float: left;
     margin: 25px 50px 50px 50px;
@@ -92,6 +84,22 @@ body {
 
 #tytul {
     font-size: 200%;
+}
+
+.welcome {
+    background: none;
+    border: none;
+    background-color: #12203d;
+    color: #ffffff;
+    width: 175px;
+    height: 50px;
+    margin: 5px;
+    font-size: 125%;
+    cursor: pointer;
+}
+
+.welcome:hover {
+    background-color: #0e182e;
 }
 
 .select {

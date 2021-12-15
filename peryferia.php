@@ -12,6 +12,12 @@
     <link rel="stylesheet" href="styleV2.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<script src="jquery.js"></script>
+    <script src="jquery.tablesorter.js"></script>
+    <script>
+        $(function() {
+            $("#output").tablesorter();
+        });
+    </script>
 </head>
 <body>
     <div id="logo">
@@ -33,14 +39,7 @@
             <button type="button" onclick="window.location.href='lan.php'" class="menu" >LAN</button>
         </div>
         <div id="logowanie">
-            <?php
-                error_reporting(0);
-                if (($_SESSION["loggedin"]) == true) {
-                    echo "<button type='button' onclick='window.location.href=`panel_sterowania.php`' class='menu'>Panel sterowania</button>";
-                } else {
-                    echo "<button type='button' onclick='window.location.href=`login.php`' class='menu'>Zaloguj się</button>";
-                }
-            ?>
+            <button type='button' onclick='window.location.href=`panel_sterowania.php`' class='menu'>Panel sterowania</button>
         </div>
     </div>
     <div id="content">
@@ -55,36 +54,40 @@
                         echo '<table id="output" style="visibility: hidden">';
                     }
         ?>
-            <tr>
-                <th>ID</th> <th>ID szkoły</th> <th>Piętro</th> <th>Pokój</th> <th>Typ urządzenia</th> <th>Producent urządzenia</th> 
-                <th>Model urządzenia</th> <th>Numer seryjny urządznia</th> <th>Part number urządzenia</th> <th>Data zakupu urządzenia</thh> 
-                <th>Gwarancja urządzenia</th> <th>Numer inwentarzowy urządzenia</th> <th>Nazwa sieciowa urządzenia</th> 
-                <th>Stan zużycia</th> <th>Awarie</th> <th>Uwagi</th>
-            </tr>
-            <?php
-                $href1 =  '<a class="href" href="szkoly.php">';
-                $href2 = '</a>';
-                $sql = "SELECT * FROM peryferia WHERE Szkoła_ID = '".$_SESSION['szkola_id']."'";
-                $result = mysqli_query($link,$sql);
-                $admin = mysqli_query($link, "SELECT * FROM uzytkownicy WHERE username = '".$_SESSION['username']."'");
-                $permissions = mysqli_fetch_assoc($admin);
-                if ($permissions["admin"] == true) {
-                    if (mysqli_num_rows($result) > 0) {
-                        // output data of each row
-                        while($row = mysqli_fetch_assoc($result)) {
-                        echo "<tr>"."<th> ".$row["ID"]."</th>"."<td>". $href1 .$row["Szkoła_ID"]. $href2. "</td>"."<td>".$row["Piętro"]."</td>"."<td>".$row["Pokój"]."</td>".
-                        "<td>".$row["Typ_urządzenia"]."</td>"."<td>".$row["Producent_urządzenia"].
-                        "</td>"."<td>".$row["Model_urządzenia"]."</td>"."<td>".$row["Numer_seryjny_urządzenia"]."</td>"."<td>".$row["Part_number_urządzenia"]."</td>".
-                        "<td>".$row["Data_zakupu_urządzenia"]."</td>"."<td>".$row["Gwarancja_urządzenia"]."</td>"."<td>".$row["Numer_inwentarzowy_urządzenia"]."</td>".
-                        "<td>".$row["Nazwa_sieciowa_urządzenia"]."</td>"."<td>".$row["Stan_zużycia"]."</td>"."<td>".$row["Awarie"]."</td>".
-                        "<td>".$row["Uwagi"]."</td>"."</tr>" ; 
+            <thead>
+                <tr>
+                    <th>ID</th> <th>ID szkoły</th> <th>Piętro</th> <th>Pokój</th> <th>Typ urządzenia</th> <th>Producent urządzenia</th> 
+                    <th>Model urządzenia</th> <th>Numer seryjny urządznia</th> <th>Part number urządzenia</th> <th>Data zakupu urządzenia</thh> 
+                    <th>Gwarancja urządzenia</th> <th>Numer inwentarzowy urządzenia</th> <th>Nazwa sieciowa urządzenia</th> 
+                    <th>Stan zużycia</th> <th>Awarie</th> <th>Uwagi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                    $href1 =  '<a class="href" href="szkoly.php">';
+                    $href2 = '</a>';
+                    $sql = "SELECT * FROM peryferia WHERE Szkoła_ID = '".$_SESSION['szkola_id']."'";
+                    $result = mysqli_query($link,$sql);
+                    $admin = mysqli_query($link, "SELECT * FROM uzytkownicy WHERE username = '".$_SESSION['username']."'");
+                    $permissions = mysqli_fetch_assoc($admin);
+                    if ($permissions["admin"] == true) {
+                        if (mysqli_num_rows($result) > 0) {
+                            // output data of each row
+                            while($row = mysqli_fetch_assoc($result)) {
+                            echo "<tr>"."<th> ".$row["ID"]."</th>"."<td>". $href1 .$row["Szkoła_ID"]. $href2. "</td>"."<td>".$row["Piętro"]."</td>"."<td>".$row["Pokój"]."</td>".
+                            "<td>".$row["Typ_urządzenia"]."</td>"."<td>".$row["Producent_urządzenia"].
+                            "</td>"."<td>".$row["Model_urządzenia"]."</td>"."<td>".$row["Numer_seryjny_urządzenia"]."</td>"."<td>".$row["Part_number_urządzenia"]."</td>".
+                            "<td>".$row["Data_zakupu_urządzenia"]."</td>"."<td>".$row["Gwarancja_urządzenia"]."</td>"."<td>".$row["Numer_inwentarzowy_urządzenia"]."</td>".
+                            "<td>".$row["Nazwa_sieciowa_urządzenia"]."</td>"."<td>".$row["Stan_zużycia"]."</td>"."<td>".$row["Awarie"]."</td>".
+                            "<td>".$row["Uwagi"]."</td>"."</tr>" ; 
+                            }
+                        } 
+                        else {
+                            echo "0 results";
                         }
-                    } 
-                    else {
-                        echo "0 results";
                     }
-                }
-            ?>
+                ?>
+            </tbody>
         </table>
         <div class="back">
             <a href="select.php" title="Przejdź na stronę główną">

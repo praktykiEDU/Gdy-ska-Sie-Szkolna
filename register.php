@@ -125,14 +125,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <button type="button" onclick="window.location.href='lan.php'" class="menu">LAN</button>
         </div>
         <div id="logowanie">
-            <?php
-                error_reporting(0);
-                if (($_SESSION["loggedin"]) == true) {
-                    echo "<button type='button' onclick='window.location.href=`panel_sterowania.php`' class='menu'>Panel sterowania</button>";
-                } else {
-                    echo "<button type='button' onclick='window.location.href=`login.php`' class='menu'>Zaloguj się</button>";
-                }
-            ?>
+            <button type='button' onclick='window.location.href=`panel_sterowania.php`' class='menu'>Panel sterowania</button>
         </div>
     </div>
     <div id="content">
