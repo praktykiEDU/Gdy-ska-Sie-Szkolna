@@ -70,10 +70,10 @@
                     function update(select) {
                         var id = select.options[select.selectedIndex].getAttribute('value');
                         document.getElementById("content").innerHTML = "<h1>Aktualizujesz szkołę o ID. " + id + 
-                        "</h1><table id='output'><tr><th>Szkola</th><td><form action='../Strona/update/szkola_s.php' method='POST'><input type='hidden' name='id' value='" + id + 
-                        "' readonly> <input type='text' name='szkola'> <button type='submit'>Zaktualizuj</button></form></td></tr><tr><th>Ulica</th><td><form action='../Strona/update/ulica_s.php' method='POST'><input type='hidden' name='id' value='" + id + 
-                        "' readonly> <input type='text' name='ulica'> <button type='submit'>Zaktualizuj</button></form></td></tr><tr><th>Kod pocztowy</th><td><form action='../Strona/update/kod_pocztowy_s.php' method='POST'><input type='hidden' name='id' value='" + id + 
-                        "' readonly> <input type='text' name='kod_pocztowy'> <button type='submit'>Zaktualizuj</button></form></td></tr><tr><th>Telefon</th><td><form action='../Strona/update/telefon_s.php' method='POST'><input type='hidden' name='id' value='" + id + 
+                        "</h1><table id='output'><tr><th>Szkola</th><td><form action='../Gdynska-Siec-Szkolna-main/update/szkola_s.php' method='POST'><input type='hidden' name='id' value='" + id + 
+                        "' readonly> <input type='text' name='szkola'> <button type='submit'>Zaktualizuj</button></form></td></tr><tr><th>Ulica</th><td><form action='../Gdynska-Siec-Szkolna-main/update/ulica_s.php' method='POST'><input type='hidden' name='id' value='" + id + 
+                        "' readonly> <input type='text' name='ulica'> <button type='submit'>Zaktualizuj</button></form></td></tr><tr><th>Kod pocztowy</th><td><form action='../Gdynska-Siec-Szkolna-main/update/kod_pocztowy_s.php' method='POST'><input type='hidden' name='id' value='" + id + 
+                        "' readonly> <input type='text' name='kod_pocztowy'> <button type='submit'>Zaktualizuj</button></form></td></tr><tr><th>Telefon</th><td><form action='../Gdynska-Siec-Szkolna-main/update/telefon_s.php' method='POST'><input type='hidden' name='id' value='" + id + 
                         "' readonly> <input type='text' name='telefon'> <button type='submit'>Zaktualizuj</button></form></td></tr></table><div class='back'><a href='update.php' title='Przejdź na stronę główną'><img src='back.png' alt='Powrót do poprzedniej strony' height='100px' width='100px'></img></a></div>";
                     }
                 </script>

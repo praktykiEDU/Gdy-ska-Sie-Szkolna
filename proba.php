@@ -71,7 +71,7 @@
                             function update(select) {
                                 var id = select.options[select.selectedIndex].getAttribute('value');
                                 document.getElementById("content").innerHTML = "<h1>Aktualizujesz komputer o ID. " + id + 
-                                "</h1><table id='output'><tr><th>ID szkoły</th><td><form action='../Strona/update/szkola_id_k.php' method='POST'><span>Aktualna wartość: 000</span>";
+                                "</h1><table id='output'><tr><th>ID szkoły</th><td><form action='../Gdynska-Siec-Szkolna-main/update/szkola_id_k.php' method='POST'><span>Aktualna wartość: 000</span>";
                             }
                         </script>
                         

@@ -11,12 +11,12 @@
             if (mysqli_query($link, $sql)) 
             {
                 echo "<script type='text/javascript'>alert('Dodano');</script>";
-                echo "<script>window.location = 'http://localhost/Strona/#loaded'</script>";
+                echo "<script>window.location = 'http://localhost/Gdynska-Siec-Szkolna-main/#loaded'</script>";
             } 
             else 
             {
                 echo "<script type='text/javascript'>alert('Błąd w wpisywaniu');</script>";
                 //echo "Error: " . $sql . "<br>" . mysqli_error($link);
-                echo "<script>window.location = 'http://localhost/Strona/insert.php'</script>";
+                echo "<script>window.location = 'http://localhost/Gdynska-Siec-Szkolna-main/insert.php'</script>";
             } 
         ?>
