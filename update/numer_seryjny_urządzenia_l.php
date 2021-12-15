@@ -13,6 +13,6 @@
                 {
                     echo "<script type='text/javascript'>alert('Błąd w wpisywaniu');</script>";
                     //echo "Error: " . $sql . "<br>" . mysqli_error($link);
-                    echo "<script>window.location = 'http://localhost/Strona/update_l.php'</script>";
+                    echo "<script>window.location = 'http://localhost/Gdynska-Siec-Szkolna-main/update_l.php'</script>";
                 } 
         ?>

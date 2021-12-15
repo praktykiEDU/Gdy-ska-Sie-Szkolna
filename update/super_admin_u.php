@@ -7,7 +7,7 @@
         if (mysqli_query($link, $sql)) 
             {
                 echo "<script type='text/javascript'>alert('Zaaktualizowano');</script>";
-                echo "<script>window.location = 'http://localhost/Strona/#loaded'</script>";
+                echo "<script>window.location = 'http://localhost/Gdynska-Siec-Szkolna-main/#loaded'</script>";
             } 
         else 
             {
