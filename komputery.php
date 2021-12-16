@@ -62,7 +62,7 @@
                     <th>Typ dysku 1</th> <th>Wielkość dysku 1</th> <th>Typ dysku 2</th> <th>Wielkość dysku 2</th> <th>Typ dysku 3</th> 
                     <th>Wielkość dysku 3</th> <th>Typ dysku 4</th> <th>Wielkość dysku 4</th> <th>RAID</th> <th>Producent monitora</th>
                     <th>Model monitora</th> <th>Numer seryjny monitora</th> <th>Part number monitora</th> <th>Data zakupu monitora</th>
-                    <th>Numer inwentarzowy monitora</th> <th>Awarie</th> <th>Uwagi</th>
+                    <th>Gwarancja monitora</th> <th>Numer inwentarzowy monitora</th> <th>Awarie</th> <th>Uwagi</th>
                 </tr>
             </thead>
             <tbody>
@@ -86,8 +86,8 @@
                                 "<td>".$row["Wielkość_dysku_1"]."</td>"."<td>".$row["Typ_dysku_2"]."</td>"."<td>".$row["Wielkość_dysku_2"]."</td>"."<td>".$row["Typ_dysku_3"]."</td>".
                                 "<td>".$row["Wielkość_dysku_3"]."</td>"."<td>".$row["Typ_dysku_4"]."</td>"."<td>".$row["Wielkość_dysku_4"]."</td>"."<td>".$row["RAID"]."</td>".
                                 "<td>".$row["Producent_monitora"]."</td>"."<td>".$row["Model_monitora"]."</td>"."<td>".$row["Numer_seryjny_monitora"]."</td>"."<td>".$row["Part_number_monitora"]."</td>".
-                                "<td>".$row["Data_zakupu_monitora"]."</td>"."<td>".$row["Numer_inwentarzowy_monitora"]."</td>"."<td>".$row["Awarie"]."</td>".
-                                "<td>".$row["Uwagi"]."</td>"."</tr>" ; 
+                                "<td>".$row["Data_zakupu_monitora"]."</td>"."<td>".$row["Gwarancja_monitora"]."</td>"."<td>".$row["Numer_inwentarzowy_monitora"]."</td>".
+                                "<td>".$row["Awarie"]."</td>"."<td>".$row["Uwagi"]."</td>"."</tr>" ; 
                                 }
                             } 
                             else {

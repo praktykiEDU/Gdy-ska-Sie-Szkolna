@@ -10,7 +10,7 @@
             $SNk = $_GET["numer_seryjny_komputera"];
             $PNk = $_GET["part_number_komputera"];
             $Datak = $_GET["data_zakupu_komputera"];
-            $Gwarancja = $_GET["gwarancja"];
+            $Gwarancja_k = $_GET["gwarancja_komputera"];
             $Numer_i_k = $_GET["numer_inwentarzowy_komputera"];
             $Host = $_GET["host_name"];
             $System_o = $_GET["system_operacyjny"];
@@ -32,12 +32,13 @@
             $SNm = $_GET["numer_seryjny_monitora"];
             $PNm = $_GET["part_number_monitora"];
             $Datam = $_GET["data_zakupu_monitora"];
+            $Gwarancja_m = $_GET["gwarancja_monitora"];
             $Numer_i_m = $_GET["numer_inwentarzowy_monitora"];
             $Awaria = $_GET["awarie"];
             $Uwagi = $_GET["uwagi"];
             
-            $sql = "INSERT INTO `komputery`(`Szkoła_ID`, `Piętro`, `Pokój`, `Typ_komputera`, `Producent_komputera`, `Model_komputera`, `Numer_seryjny_komputera`, `Part_number_komputera`, `Data_zakupu_komputera`, `Gwarancja_komputera`, `Numer_inwentarzowy_komputera`, `Nazwa_hosta`, `System_operacyjny`, `Wersja_bitowa`, `Nazwa_procesora`, `Oznaczenie_procesora`, `RAM`, `Typ_dysku_1`, `Wielkość_dysku_1`, `Typ_dysku_2`, `Wielkość_dysku_2`, `Typ_dysku_3`, `Wielkość_dysku_3`, `Typ_dysku_4`, `Wielkość_dysku_4`, `RAID`, `Producent_monitora`, `Model_monitora`, `Numer_seryjny_monitora`, `Part_number_monitora`, `Data_zakupu_monitora`, `Numer_inwentarzowy_monitora`, `Awarie`, `Uwagi`)
-            VALUES ('$szkola','$pietro','$pokoj','$typk','$producentk','$modelk','$SNk','$PNk','$Datak','$Gwarancja','$Numer_i_k','$Host','$System_o','$Bit','$Procesor','$Oznaczenie_p','$RAM','$Dysk1','$Dysk1_w','$Dysk2','$Dysk2_w','$Dysk3','$Dysk3_w','$Dysk4','$Dysk4_w','$RAID','$Producentm','$Modelm','$SNm','$PNm','$Datam','$Numer_i_m','$Awaria','$Uwagi')";
+            $sql = "INSERT INTO `komputery`(`Szkoła_ID`, `Piętro`, `Pokój`, `Typ_komputera`, `Producent_komputera`, `Model_komputera`, `Numer_seryjny_komputera`, `Part_number_komputera`, `Data_zakupu_komputera`, `Gwarancja_komputera`, `Numer_inwentarzowy_komputera`, `Nazwa_hosta`, `System_operacyjny`, `Wersja_bitowa`, `Nazwa_procesora`, `Oznaczenie_procesora`, `RAM`, `Typ_dysku_1`, `Wielkość_dysku_1`, `Typ_dysku_2`, `Wielkość_dysku_2`, `Typ_dysku_3`, `Wielkość_dysku_3`, `Typ_dysku_4`, `Wielkość_dysku_4`, `RAID`, `Producent_monitora`, `Model_monitora`, `Numer_seryjny_monitora`, `Part_number_monitora`, `Data_zakupu_monitora`, `Gwarancja_monitora`, `Numer_inwentarzowy_monitora`, `Awarie`, `Uwagi`)
+            VALUES ('$szkola','$pietro','$pokoj','$typk','$producentk','$modelk','$SNk','$PNk','$Datak','$Gwarancja_k','$Numer_i_k','$Host','$System_o','$Bit','$Procesor','$Oznaczenie_p','$RAM','$Dysk1','$Dysk1_w','$Dysk2','$Dysk2_w','$Dysk3','$Dysk3_w','$Dysk4','$Dysk4_w','$RAID','$Producentm','$Modelm','$SNm','$PNm','$Datam','$Gwarancja_m','$Numer_i_m','$Awaria','$Uwagi')";
             if (mysqli_query($link, $sql)) 
             {
                 echo "<script type='text/javascript'>alert('Dodano');</script>";

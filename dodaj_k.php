@@ -96,8 +96,8 @@
                         <td><input type='date' name='data_zakupu_komputera' /></td>
                     </tr>
                     <tr>
-                        <th>Gwarancja<br>(data wygaśnięcia)</th>
-                        <td><input type='date' name='gwarancja' /></td>
+                        <th>Gwarancja komputera<br>(data wygaśnięcia)</th>
+                        <td><input type='date' name='gwarancja_komputera' /></td>
                     </tr>
                     <tr>
                         <th>Numer inwentarzowy komputera</th>
@@ -212,6 +212,10 @@
                     <tr>
                         <th>Data zakupu monitora</th>
                         <td><input type='date' name='data_zakupu_monitora' /></td>
+                    </tr>
+                    <tr>
+                        <th>Gwarancja monitora<br>(data wygaśnięcia)</th>
+                        <td><input type='date' name='gwarancja_monitora' /></td>
                     </tr>
                     <tr>
                         <th>Numer inwentarzowy monitora</th>
