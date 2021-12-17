@@ -1813,8 +1813,7 @@ CREATE TABLE IF NOT EXISTS `uzytkownicy` (
 --
 
 INSERT INTO `uzytkownicy` (`id`, `username`, `email`, `password`, `szkoła_id`, `szkoła`, `admin`, `super_admin`) VALUES
-(2, 'jp2', '', '$2y$10$n7wuNZNcq/FUAFoXNYwXReu9aydLtgtWbZTBQrTWJh9YakpSDddOu', 1, '', 1, 1),
-(3, 'Dziendobry', '', '$2y$10$dQkoZRXq8933DFZq4a7xPufjYoCzjxv0J/K17BlSwerZFuCgtRHYm', 1, '0', 1, 0);
+(1, 'jp2', '', '$2y$10$zZc6WkbgHqsAD2731JXaGeeJeIu98jW7wfug9U/wMXWj3Z7M.JVpO', 1, '', 1, 1);
 
 --
 -- Ograniczenia dla zrzutów tabel
