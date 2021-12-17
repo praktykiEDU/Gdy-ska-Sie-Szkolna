@@ -1,0 +1,8 @@
+Dla tabeli "komputery":
+INSERT INTO `komputery`(`Szkoła_ID`, `Piętro`, `Pokój`, `Typ_komputera`, `Producent_komputera`, `Model_komputera`, `Numer_seryjny_komputera`, `Part_number_komputera`, `Data_zakupu_komputera`, `Gwarancja_komputera`, `Numer_inwentarzowy_komputera`, `Nazwa_hosta`, `System_operacyjny`, `Wersja_bitowa`, `Nazwa_procesora`, `Oznaczenie_procesora`, `RAM`, `Typ_dysku_1`, `Wielkość_dysku_1`, `Typ_dysku_2`, `Wielkość_dysku_2`, `Typ_dysku_3`, `Wielkość_dysku_3`, `Typ_dysku_4`, `Wielkość_dysku_4`, `RAID`, `Producent_monitora`, `Model_monitora`, `Numer_seryjny_monitora`, `Part_number_monitora`, `Data_zakupu_monitora`, `Gwarancja_monitora`, `Numer_inwentarzowy_monitora`, `Awarie`, `Uwagi`) VALUES
+
+Dla tabeli "peryferia":
+INSERT INTO `peryferia`(`Szkoła_ID`, `Piętro`, `Pokój`, `Typ_urządzenia`, `Producent_urządzenia`, `Model_urządzenia`, `Numer_seryjny_urządzenia`, `Part_number_urządzenia`, `Data_zakupu_urządzenia`, `Gwarancja_urządzenia`, `Numer_inwentarzowy_urządzenia`, `Nazwa_sieciowa_urządzenia`, `Stan_zużycia`, `Awarie`, `Uwagi`) VALUES
+
+Dla tabeli "sieci_lan":
+INSERT INTO `sieci_lan`(`Szkoła_ID`, `Piętro`, `Pokój`, `Lokalizacja_urządzeń_w_szafie_typu_Rack`, `Typ_urządzenia`, `Producent_urządzenia`, `Model_urządzenia`, `Numer_seryjny_urządzenia`, `Part_number_urządzenia`, `Data_zakupu_urządzenia`, `Gwarancja_urządzenia`, `Numer_inwentarzowy_urządzenia`, `Nazwa_sieciowa_urządzenia`, `Awarie`, `Uwagi`) VALUES

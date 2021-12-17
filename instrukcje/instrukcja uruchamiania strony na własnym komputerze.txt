@@ -1,0 +1,7 @@
+1. Zainstaluj program XAMPP oraz pobierz wszystkie pliki z repozytorium (przycisk "Code" -> "Download ZIP")
+2. Umieść pliki z repozytorium w folderze "htdocs" znajdującym się w folderze instalacyjnym XAMPP'a (domyślnie C:\xampp\htdocs)
+3. Włącz program XAMPP i włącz moduły "Apache" i "MySQL"
+4. Wyeksportuj bazę danych znajdującą się w plikach z repozytorium ("gss.sql").
+Aby to zrobić naciśnij w XAMPP'ie przycisk "Admin" znajdujący się w tej samej linii co "MySQL". Przeniesie Cię on na stronę zarządzania bazami danych.
+Wejdź w zakładkę "Import", wybierz plik i naciśnij "Wykonaj".
+5. Gotowe! Aby zobaczyć stronę odpal dowolną przeglądarkę i wpisz "http://localhost/Gdynska-Siec-Szkolna-main/index.php".

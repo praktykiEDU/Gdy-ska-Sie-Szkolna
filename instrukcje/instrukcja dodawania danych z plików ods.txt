@@ -1,0 +1,9 @@
+1. Przekonwertuj plik na format XLSX (np. za pomocą strony https://onlineconvertfree.com/pl/convert/ods/).
+2. Przekonwertuj otrzymany plik XLSX na format SQL (np. za pomocą strony https://sqlizer.io/#/).
+3. W otrzymanym pliku usuń pierwszą część kodu (od "CREATE TABLE" do pierwszego ");").
+4. Zamień pierwszą linijkę pozostałego kodu na jeden z insertów podanych w pliku inserty.txt, zależnie od tego, do jakiej tabeli dodajesz pliki.
+5. Poniżej, we wszystkich nawiasach zamień pierwszą wartość na ID szkoły, której dotyczą dane, które chcesz wprowadzić.
+6. Po za pisaniu pliku, włącz XAMPP'a i kliknij na przycisk "Admin" przycisk "Admin" znajdujący się w tej samej linii co "MySQL". Przeniesie Cię on na stronę zarządzania bazami danych.
+7. Po lewej stronie znajduje się lista baz danych. Kliknij na wcześniej utworzoną bazę "gss". Wyświetlą się pod nią wszystkie zawarte w niej tabele. Wybierz tą, do której chcesz dodać dane (taką samą jak we wcześniejszym insercie).
+8. Następnie przejdź w zakładkę "Import", wybierz otrzymany wcześniej plik SQL i naciśnij "Wykonaj".
+9. Gotowe!
